@@ -68,10 +68,20 @@ public class Human extends Mammal
         return this.get_name().equals(human.get_name()) &&
                this.get_age() == human.get_age() &&
                this.get_color().equals(human.get_color()) &&
-               this.get_feeding_behavior().equals(human.get_feeding_behavior()) &&
-               this.get_feeding_behavior().equals(human.get_feeding_behavior()) &&
+               this.get_feeding_behavior() == human.get_feeding_behavior() &&
                this.get_legs_number() == human.get_legs_number() &&
                this.get_food_type().equals(human.get_food_type()) &&
                this.get_hobby().equals(human.get_hobby());
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return new Human(this.get_name(),
+                        this.get_age(),
+                        this.get_color(),
+                        this.get_legs_number(),
+                        this.get_feeding_behavior(),
+                        this.get_food_type(),
+                        this.get_hobby());
     }
 }

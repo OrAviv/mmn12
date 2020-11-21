@@ -72,4 +72,15 @@ public class Seagull extends Bird
                this.get_flight_hours() == seagull.get_flight_hours() &&
                this.get_food_type().equals(seagull.get_food_type());
     }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return new Seagull(this.get_name(),
+                        this.get_age(),
+                        this.get_color(),
+                        this.get_wingspan(),
+                        this.get_feeding_behavior(),
+                        this.get_food_type(),
+                        this.get_flight_hours());
+    }
 }

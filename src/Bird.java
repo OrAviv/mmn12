@@ -59,4 +59,13 @@ public class Bird extends Animal
                this.get_feeding_behavior() == bird.get_feeding_behavior() &&
                this.get_wingspan() == bird.get_wingspan();
     }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return new Bird(this.get_name(),
+                        this.get_age(),
+                        this.get_color(),
+                        this.get_wingspan(),
+                        this.get_feeding_behavior());
+    }
 }

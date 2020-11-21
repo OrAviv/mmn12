@@ -21,9 +21,9 @@ public class Mammal extends Animal
         return this.legs_number;
     }
 
-    public String get_feeding_behavior()
+    public Feeding_Behavior get_feeding_behavior()
     {
-        return this.feeding_behavior.toString();
+        return this.feeding_behavior;
     }
 
     @Override
@@ -59,7 +59,16 @@ public class Mammal extends Animal
                this.get_age() == mammal.get_age() &&
                this.get_color().equals(mammal.get_color()) &&
                this.get_legs_number() == mammal.get_legs_number() &&
-               this.get_feeding_behavior().equals(mammal.get_feeding_behavior());
+               this.get_feeding_behavior().toString().equals(mammal.get_feeding_behavior().toString());
 
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return new Mammal(this.get_name(),
+                          this.get_age(),
+                          this.get_color(),
+                          this.get_legs_number(),
+                          this.get_feeding_behavior());
     }
 }

@@ -62,4 +62,9 @@ public class Animal
                this.get_age() == animal.get_age() &&
                this.get_color().equals(animal.get_color());
     }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return new Animal(this.get_name(),this.get_age(),this.get_color());
+    }
 }

@@ -78,8 +78,18 @@ public class Dog extends Mammal {
                 this.get_age() == dog.get_age() &&
                 this.get_color().equals(dog.get_color()) &&
                 this.get_legs_number() == dog.get_legs_number() &&
-                this.get_feeding_behavior().equals(dog.get_feeding_behavior()) &&
+                this.get_feeding_behavior() == dog.get_feeding_behavior() &&
                 this.get_food_type().equals(dog.get_food_type()) &&
                 this.get_sound().equals(dog.get_sound());
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return new Dog(this.get_name(),
+                       this.get_age(),
+                       this.get_color(),
+                       this.get_legs_number(),
+                       this.get_feeding_behavior(),
+                       this.get_food_type());
     }
 }

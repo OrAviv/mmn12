@@ -33,9 +33,9 @@ public class Flamingo extends Bird
             this.leg = Leg.left;
     }
 
-    public String get_leg()
+    public Leg get_leg()
     {
-        return this.leg.toString();
+        return this.leg;
     }
 
     @Override
@@ -75,7 +75,18 @@ public class Flamingo extends Bird
                this.get_color().equals(flamingo.get_color()) &&
                this.get_feeding_behavior() == flamingo.get_feeding_behavior() &&
                this.get_wingspan() == flamingo.get_wingspan() &&
-               this.get_leg().equals(flamingo.get_leg()) &&
+               this.get_leg() == flamingo.get_leg() &&
                this.get_food_type().equals(flamingo.get_food_type());
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return new Flamingo(this.get_name(),
+                        this.get_age(),
+                        this.get_color(),
+                        this.get_wingspan(),
+                        this.get_feeding_behavior(),
+                        this.get_food_type(),
+                        this.get_leg());
     }
 }
