@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Animal
 {
     protected String name;
@@ -48,5 +50,16 @@ public class Animal
                 ", age=" + age +
                 ", color='" + color + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) return true;
+        if (!(o instanceof Animal)) return false;
+        Animal animal = (Animal) o;
+        return this.get_name().equals(animal.get_name()) &&
+               this.get_age() == animal.get_age() &&
+               this.get_color().equals(animal.get_color());
     }
 }

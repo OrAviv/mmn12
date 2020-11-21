@@ -48,7 +48,8 @@ public class Bird extends Animal
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o)
+    {
         if (this == o) return true;
         if (!(o instanceof Bird)) return false;
         Bird bird = (Bird) o;

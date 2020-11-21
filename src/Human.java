@@ -45,7 +45,8 @@ public class Human extends Mammal
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Human{" +
                 "food_type='" + food_type + '\'' +
                 ", hobby='" + hobby + '\'' +
@@ -58,7 +59,8 @@ public class Human extends Mammal
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o)
+    {
         if (this == o) return true;
         if (!(o instanceof Human)) return false;
         if (!super.equals(o)) return false;

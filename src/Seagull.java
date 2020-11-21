@@ -45,7 +45,8 @@ public class Seagull extends Bird
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Seagull{" +
                 "food_type='" + food_type + '\'' +
                 ", flight_hours=" + flight_hours +

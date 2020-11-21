@@ -27,7 +27,8 @@ public class Owner
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Owner{" +
                 "name='" + name + '\'' +
                 ", phone_number=" + phone_number +
@@ -35,7 +36,8 @@ public class Owner
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o)
+    {
         if (this == o) return true;
         if (!(o instanceof Owner)) return false;
         Owner owner = (Owner) o;
