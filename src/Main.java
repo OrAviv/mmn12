@@ -29,7 +29,7 @@ public class Main
         d.set_owner_phone_number(545454545);
         System.out.println(animals.get(0).toString());
         System.out.println(animals.get(animals.size()-1).toString());
-        System.out.println("after changing clones age -- Equals on new clone results: "+animals.get(0).equals(animals.get(animals.size()-1)));
+        System.out.println("after changing clones owner -- Equals on new clone results: "+animals.get(0).equals(animals.get(animals.size()-1)));
 
         for (int i=0; i<animals.size(); i++)
         {
