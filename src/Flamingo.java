@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public class Flamingo extends Bird
 {
     String food_type;
@@ -40,21 +38,20 @@ public class Flamingo extends Bird
 
     @Override
     public String toString() {
-        return "Flamingo{" +
-                "food_type='" + food_type + '\'' +
-                ", leg=" + leg +
-                ", feeding_behavior=" + feeding_behavior +
-                ", wingspan=" + wingspan +
-                ", name='" + name + '\'' +
+        return "Flamingo" +
+                " name='" + name + '\'' +
                 ", age=" + age +
                 ", color='" + color + '\'' +
-                '}';
+                ", food_type='" + food_type + '\'' +
+                ", leg=" + leg +
+                ", feeding_behavior=" + feeding_behavior +
+                ", wingspan=" + wingspan_in_cm;
     }
 
     @Override
     public void eat()
     {
-        System.out.println("I am "+this.feeding_behavior.toString()+" and I eat"+this.food_type);
+        System.out.println("I am "+this.feeding_behavior.toString()+" and I eat "+this.food_type);
     }
 
     @Override

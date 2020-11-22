@@ -47,15 +47,14 @@ public class Human extends Mammal
     @Override
     public String toString()
     {
-        return "Human{" +
-                "food_type='" + food_type + '\'' +
-                ", hobby='" + hobby + '\'' +
-                ", legs_number=" + legs_number +
-                ", feeding_behavior=" + feeding_behavior +
-                ", name='" + name + '\'' +
+        return "Human" +
+                " name='" + name + '\'' +
                 ", age=" + age +
                 ", color='" + color + '\'' +
-                '}';
+                ", food_type='" + food_type + '\'' +
+                ", hobby='" + hobby + '\'' +
+                ", legs_number=" + legs_number +
+                ", feeding_behavior=" + feeding_behavior;
     }
 
     @Override

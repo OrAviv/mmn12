@@ -1,6 +1,3 @@
-import java.sql.Struct;
-import java.util.Objects;
-
 public class Seagull extends Bird
 {
     String food_type;
@@ -35,7 +32,7 @@ public class Seagull extends Bird
     @Override
     public void eat()
     {
-        System.out.println("I am "+this.feeding_behavior.toString()+" and I eat"+this.food_type);
+        System.out.println("I am "+this.feeding_behavior.toString()+" and I eat "+this.food_type);
     }
 
     @Override
@@ -47,15 +44,14 @@ public class Seagull extends Bird
     @Override
     public String toString()
     {
-        return "Seagull{" +
-                "food_type='" + food_type + '\'' +
-                ", flight_hours=" + flight_hours +
-                ", feeding_behavior=" + feeding_behavior +
-                ", wingspan=" + wingspan +
-                ", name='" + name + '\'' +
+        return "Seagull" +
+                " name='" + name + '\'' +
                 ", age=" + age +
                 ", color='" + color + '\'' +
-                '}';
+                ", food_type='" + food_type + '\'' +
+                ", flight_hours=" + flight_hours +
+                ", feeding_behavior=" + feeding_behavior +
+                ", wingspan=" + wingspan_in_cm;
     }
 
     @Override

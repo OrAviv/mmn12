@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public class Bird extends Animal
 {
     public enum Feeding_Behavior
@@ -12,12 +10,12 @@ public class Bird extends Animal
     };
 
     protected Feeding_Behavior feeding_behavior;
-    protected int wingspan;
+    protected int wingspan_in_cm;
 
-    public Bird(String name, int age, String color, int wingspan, Feeding_Behavior feeding_behavior)
+    public Bird(String name, int age, String color, int wingspan_in_cm, Feeding_Behavior feeding_behavior)
     {
         super(name, age, color);
-        this.set_wingspan(wingspan);
+        this.set_wingspan(wingspan_in_cm);
         this.feeding_behavior = feeding_behavior;
     }
 
@@ -28,23 +26,22 @@ public class Bird extends Animal
 
     public int get_wingspan()
     {
-        return this.wingspan;
+        return this.wingspan_in_cm;
     }
 
     private void set_wingspan (int wingspan)
     {
-        this.wingspan = wingspan;
+        this.wingspan_in_cm = wingspan;
     }
 
     @Override
     public String toString() {
-        return "Bird{" +
-                "feeding_behavior=" + feeding_behavior +
-                ", wingspan=" + wingspan +
-                ", name='" + name + '\'' +
+        return "Bird" +
+                " name='" + name + '\'' +
                 ", age=" + age +
                 ", color='" + color + '\'' +
-                '}';
+                ", feeding_behavior=" + feeding_behavior +
+                ", wingspan=" + wingspan_in_cm;
     }
 
     @Override

@@ -40,13 +40,12 @@ public class Mammal extends Animal
 
     @Override
     public String toString() {
-        return "Mammal{" +
-                "legs_number=" + legs_number +
-                ", feeding_behavior=" + feeding_behavior +
-                ", name='" + name + '\'' +
+        return "Mammal" +
+                " name='" + name + '\'' +
                 ", age=" + age +
                 ", color='" + color + '\'' +
-                '}';
+                ", legs_number=" + legs_number +
+                ", feeding_behavior=" + feeding_behavior;
     }
 
     @Override

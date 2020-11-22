@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class Dog extends Mammal {
 
-    String food_type;
-    String sound = "bark";
-    Owner owner;
+    private String food_type;
+    private String sound = "bark";
+    protected Owner owner;
 
     Scanner scanner = new Scanner(System.in);
 
@@ -53,18 +53,39 @@ public class Dog extends Mammal {
         this.owner = new Owner(owner_name, owner_phone_number);
     }
 
+    public void set_owner_name(String name)
+    {
+        if (owner == null)
+        {
+            System.out.println("whats "+name+" phone number?");
+            this.set_owner(name, scanner.nextInt());
+        }
+        else
+            owner.set_name(name);
+    }
+
+    public void set_owner_phone_number(int number)
+    {
+        if (owner == null)
+        {
+            System.out.println("whats this owner name?");
+            this.set_owner(scanner.nextLine(),number);
+        }
+        else
+            owner.set_phone_number(number);
+    }
+
     @Override
     public String toString() {
-        return "Dog{" +
-                "food_type='" + food_type + '\'' +
+        return "Dog" +
+                " name='" + name + '\'' +
+                ", age=" + age +
+                ", color='" + color + '\'' +
+                ", food_type='" + food_type + '\'' +
                 ", sound='" + sound + '\'' +
                 ", owner=" + owner +
                 ", legs_number=" + legs_number +
-                ", feeding_behavior=" + feeding_behavior +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", color='" + color + '\'' +
-                '}';
+                ", feeding_behavior=" + feeding_behavior;
     }
 
     @Override

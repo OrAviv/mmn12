@@ -2,8 +2,8 @@ import java.util.Objects;
 
 public class Owner
 {
-    String name;
-    int phone_number;
+    private String name;
+    private int phone_number;
 
     public Owner (String name, int phone_number)
     {
@@ -21,9 +21,14 @@ public class Owner
         return this.phone_number;
     }
 
-    private void set_phone_number(int phone_number)
+    public void set_phone_number(int phone_number)
     {
         this.phone_number = phone_number;
+    }
+
+    public void set_name(String name)
+    {
+        this.name = name;
     }
 
     @Override
