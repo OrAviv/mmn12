@@ -1,3 +1,4 @@
+// tow levels down from Animal we have class Seagull which inherits from Bird.
 public class Seagull extends Bird
 {
     String food_type;

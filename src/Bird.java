@@ -1,3 +1,5 @@
+
+// One level down from animal we have class Bird.
 public class Bird extends Animal
 {
     public enum Feeding_Behavior

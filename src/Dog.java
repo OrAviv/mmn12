@@ -1,6 +1,7 @@
 import java.util.Objects;
 import java.util.Scanner;
 
+// tow levels down from Animal we have class Dog, which inherit from Mammal.
 public class Dog extends Mammal {
 
     private String food_type;

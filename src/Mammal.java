@@ -1,3 +1,4 @@
+// One level down from Animal we have Mammal, which inherits Animal.
 public class Mammal extends Animal
 {
     public enum Feeding_Behavior

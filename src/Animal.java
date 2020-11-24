@@ -1,5 +1,6 @@
 import java.util.Objects;
 
+// Animal - base class - everyone will inherit from here.
 public class Animal
 {
     protected String name;

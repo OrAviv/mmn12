@@ -1,5 +1,4 @@
-import java.util.Objects;
-
+//Owner Class.
 public class Owner
 {
     private String name;

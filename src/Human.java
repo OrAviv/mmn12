@@ -1,5 +1,5 @@
-import java.util.Objects;
 
+// tow levels down from Animal we have class Human which inherits from Mammal.
 public class Human extends Mammal
 {
     String food_type;
